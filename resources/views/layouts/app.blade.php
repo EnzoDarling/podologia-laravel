@@ -25,7 +25,7 @@
         </ul>
         <ul class="navbar-nav">
           @auth
-          <li class="nav-item">
+          <li class="nav-item mx-lg-3">
             <a class="nav-link" href="">{{ auth()->user()->name}}</a>
           </li>
           <li class="nav-item">
@@ -36,7 +36,7 @@
           </li>
           @endauth
           @guest
-            <li class="nav-item nav-acceso">
+            <li class="nav-item nav-acceso mx-lg-3">
               <a class="btn btn-light" href="{{route('entrar')}}">Entrar</a>
             </li>
             <li class="nav-item">
@@ -48,7 +48,7 @@
       
     </div>
   </nav>
-  <section class="container align-items-center">
+  <section class="container align-items-center py-4">
     @yield('content')
   </section>
   <script src="{{ asset('js/app.js') }}"></script>

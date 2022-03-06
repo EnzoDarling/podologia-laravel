@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class EntrarControlador extends Controller
 {
+    public function __construct(){
+        $this->middleware(['guest']);
+    }
     public function index(){
         return view('acceso.entrar');
     }
@@ -20,6 +23,6 @@ class EntrarControlador extends Controller
             return back()->with('status', 'Acceso Incorrecto');
         }
 
-        return redirect()->route('inicio');
+        return redirect()->route('fichas');
     }
 }

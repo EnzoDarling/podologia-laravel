@@ -24,12 +24,22 @@
           </li>
         </ul>
         <ul class="navbar-nav">
+          @auth
           <li class="nav-item">
-            <button class="btn btn-light" type="submit">Entrar</button>
+            <a class="nav-link" href="">Enzo</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-light" href="{{route('registro')}}">Registro</a>
+            <a class="nav-link" href="">Salir</a>
           </li>
+          @endauth
+          @guest
+            <li class="nav-item nav-acceso">
+              <a class="btn btn-light" href="{{route('entrar')}}">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-light nav-acceso" href="{{route('registro')}}">Registro</a>
+            </li>
+          @endguest
         </ul>
       </div>
       

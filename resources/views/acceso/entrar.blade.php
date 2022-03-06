@@ -25,8 +25,8 @@
       @enderror
     </div>
     <div class="form-check my-2">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+      <input type="checkbox" class="form-check-input" name="remember" id="remember">
+      <label class="form-check-label" for="remember">Recordarme</label>
     </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
   </form>

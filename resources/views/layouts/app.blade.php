@@ -26,7 +26,7 @@
         <ul class="navbar-nav">
           @auth
           <li class="nav-item mx-lg-3">
-            Hola!<a class="nav-link" href="">{{ auth()->user()->name}}</a>
+            <a class="nav-link" href="">{{ auth()->user()->name}}</a>
           </li>
           <li class="nav-item">
             <form action="{{ route('salir') }}" method="post">

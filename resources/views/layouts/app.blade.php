@@ -26,7 +26,7 @@
         <ul class="navbar-nav">
           @auth
           <li class="nav-item mx-lg-3">
-            <a class="nav-link" href="">{{ auth()->user()->name}}</a>
+            Hola!<a class="nav-link" href="">{{ auth()->user()->name}}</a>
           </li>
           <li class="nav-item">
             <form action="{{ route('salir') }}" method="post">
@@ -51,6 +51,7 @@
   <section class="container align-items-center py-4">
     @yield('content')
   </section>
+  
   <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

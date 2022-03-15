@@ -24,7 +24,7 @@ Route::post('/registro', [RegistroControlador::class, 'store']);
 //FICHAS
 Route::get('/fichas', [FichasControlador::class, 'index'])->name('fichas');
 Route::get('/nuevaficha', [FichasControlador::class, 'nuevaficha'])->name('nuevaficha');
-Route::post('/nuevaficha', [FichasControlador::class, 'crearficha']);
+Route::post('/nuevaficha', [FichasControlador::class, 'crearficha'])->name('crearficha');
 
 //PACIENTES
 Route::get('/pacientes', [PacientesControlador::class, 'index'])->name('pacientes');

@@ -13,7 +13,7 @@ class FichasControlador extends Controller
     public function nuevaficha(){
         return view('fichas.crearfichas');
     }
-    public function crearficha(){
-        dd('ok');
+    public function crearficha(Request $request){
+        dd($request->hiperhidrosis);
     }
 }

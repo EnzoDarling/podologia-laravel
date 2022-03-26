@@ -21,27 +21,23 @@
           <th scope="col">Nombre</th>
           <th scope="col">Edad</th>
           <th scope="col">Dirección</th>
+          <th scope="col">Telefono</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>#</td>
-          <td>#</td>
-          <td>#</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>#</td>
-          <td>#</td>
-          <td>#</td>          
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>#</td>
-          <td>#</td>
-          <td>#</td>
-        </tr>
+        @if($pacientes->count())
+          @foreach ($pacientes as $paciente)
+            <tr>
+              <td>{{$paciente->paciente_apellido}}</td>
+              <td>{{$paciente->paciente_nombre}}</td>
+              <td>{{$paciente->paciente_edad}}</td>
+              <td>{{$paciente->paciente_dire}}</td>
+              <td>{{$paciente->paciente_tel}}</td>
+            </tr>
+          @endforeach
+        @else
+          No hay pacientes que mostrar
+        @endif
       </tbody>
     </table>
   </section>

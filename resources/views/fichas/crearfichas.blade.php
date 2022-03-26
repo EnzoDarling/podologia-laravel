@@ -7,29 +7,29 @@
     @csrf
     <div class="form-group mt-4">
       <label for="apellido">Apellido</label>
-      <input type="text" name="ficha_apellido" id="apellido" class="form-control @error('name') border border-danger @enderror" placeholder="Apellido del Paciente" value="{{ old('apellido') }}">
-      @error('apellido')
+      <input type="text" name="ficha_apellido" id="apellido" class="form-control @error('ficha_apellido') border border-danger @enderror" placeholder="Apellido del Paciente" value="{{ old('apellido') }}">
+      @error('ficha_apellido')
         <div class="text-danger">{{$message}}</div>
       @enderror
     </div>
     <div class="form-group my-2">
       <label for="nombre">Nombre</label>
-      <input type="text" name="ficha_nombre" id="nombre" class="form-control @error('username') border border-danger @enderror" placeholder="Nombre del Paciente" value="{{ old('nombre')}}">
-      @error('nombre')
+      <input type="text" name="ficha_nombre" id="nombre" class="form-control @error('ficha_nombre') border border-danger @enderror" placeholder="Nombre del Paciente" value="{{ old('nombre')}}">
+      @error('ficha_nombre')
         <div class="text-danger">{{$message}}</div>
       @enderror
     </div>
     <div class="form-group my-2">
       <label for="edad">Edad</label>
-      <input type="text" name="ficha_edad" id="edad" class="form-control @error('nombre') border border-danger @enderror" placeholder="Edad del Paciente" value="{{ old('edad')}}">
-      @error('edad')
+      <input type="text" name="ficha_edad" id="edad" class="form-control @error('ficha_edad') border border-danger @enderror" placeholder="Edad del Paciente" value="{{ old('edad')}}">
+      @error('ficha_edad')
         <div class="text-danger">{{$message}}</div>
       @enderror
     </div>
     <div class="form-group my-2">
       <label for="direccion">Dirección</label>
-      <input type="text" name="ficha_direccion" id="direccion" class="form-control @error('direccion') border border-danger @enderror" placeholder="Dire del Paciente" value="{{ old('direccion')}}">
-      @error('direccion')
+      <input type="text" name="ficha_direccion" id="direccion" class="form-control @error('ficha_direccion') border border-danger @enderror" placeholder="Dire del Paciente" value="{{ old('direccion')}}">
+      @error('ficha_direccion')
         <div class="text-danger">{{$message}}</div>
       @enderror
     </div>

@@ -27,8 +27,12 @@ Route::get('/nuevaficha', [FichasControlador::class, 'nuevaficha'])->name('nueva
 Route::post('/nuevaficha', [FichasControlador::class, 'crearficha'])->name('crearficha');
 
 //PACIENTES
-Route::get('/pacientes', [PacientesControlador::class, 'index'])->name('pacientes');
+Route::get('/pacientes', [PacientesControlador::class, 'index'])->name('pacientes')
+->middleware('auth');
+// Route::get('/pacientes/{$id}', [PacientesControlador::class, 'mostrarpaciente']);
 Route::get('/nuevopaciente', [PacientesControlador::class, 'nuevopaciente'])->name('nuevopaciente');
+Route::post('/nuevopaciente', [PacientesControlador::class, 'crearpaciente'])->name('crearpaciente');
+
 
 Route::get('/fichas', function () {
     return view('fichas.index');

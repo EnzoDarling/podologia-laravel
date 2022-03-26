@@ -15,11 +15,10 @@ return new class extends Migration
     {
         Schema::create('fichas', function (Blueprint $table) {
             $table->id();
-            //$table->integer('user_id')->unsigned()->index();
             $table->foreignId('paciente_id')->constrained()->onDelete('cascade');
             $table->string("ficha_apellido");
             $table->string("ficha_nombre");
-            $table->integer("ficha_edad");
+            $table->string("ficha_edad");
             $table->string("ficha_direccion");
             $table->boolean("talonagr");
             $table->boolean("hiperhidrosis");
@@ -30,6 +29,7 @@ return new class extends Migration
             $table->boolean("onicocrip");
             $table->boolean("dbt");
             $table->boolean("hiperquera");
+            $table->integer('user_id')->unsigned()->index();
             $table->timestamps();
         });
     }
